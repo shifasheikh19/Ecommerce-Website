@@ -12,14 +12,19 @@ function App() {
       <h1>Header component</h1>
       <Routes>
         <Route path="/auth" element={<AuthLayout/>}>
-        <Route path="login" element={<AuthLogin/>}/>
-        <Route path="register" element={<AuthRegister/>}/>
+          <Route path="login" element={<AuthLogin/>}/>
+          <Route path="register" element={<AuthRegister/>}/>
+        
         
 
 
         
 
         </Route>
+        <Route path="/admin" element={<AdminLayout/>}>
+
+        </Route>
+
 
       </Routes>
 
