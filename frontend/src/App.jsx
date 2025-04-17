@@ -10,6 +10,10 @@ import AdminLayout from './components/admin-view/layout';
 import AdminProducts from './pages/admin-view/products'; 
 import ShoppingLayout from './components/shopping-view/layout';
 import NotFound from './pages/not-found';
+import ShoppingAccount from './pages/shopping-view/account';
+import ShoppingCheckout from './pages/shopping-view/checkout';
+import ShoppingListing from './pages/shopping-view/listing';
+import ShoppingHome from './pages/shopping-view/home';
 
 
 
@@ -23,7 +27,7 @@ function App() {
 
   return (
     <div className="flex flex-col overflow-hidden bg-white">
-      <h1>Header component</h1>
+      
       <Routes>
         <Route path="/auth" element={<AuthLayout/>}>
           <Route path="login" element={<AuthLogin/>}/>
@@ -44,8 +48,12 @@ function App() {
 
         </Route>
         <Route path="/shop" element={<ShoppingLayout/>}>
+
         
-        
+        <Route path="home" element={<ShoppingHome/>}/>
+        <Route path="listing" element={<ShoppingListing/>}/>
+        <Route path="checkout" element={<ShoppingCheckout/>}/>
+        <Route path="account" element={<ShoppingAccount/>}/>
         </Route>
         <Route path="*" element={<NotFound/>}/>
 
